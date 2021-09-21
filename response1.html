@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+    <h1>Responsive Elements</h1>
+    <p>This image of the water view of NYC uses the srcset method.</p>
+  </head>
+  <body>
+    <div class="responsive">
+     <img srcset="img/water_View_NYC540.jpg 540w,
+                  img/water_View_NYC840.jpg 840w,
+                  img/water_View_NYC1028.jpg 1028w,"
+           sizes="(max-width: 540px) 100vw,
+                 (max-width: 840px) 85vw,
+                 (max-width: 1028px) 60vw,
+                 1028px"
+                src="img/water_View_NYC.jpg">
+      <br>
+      <p>This picture below uses the picture method.</p>
+
+<picture>
+  <source media="(min-width: 780px)" srcset="img/tall_Skinny_Tree780.jpg">
+  <source media="(min-width: 630px)" srcset="img/tall_Skinny_Tree630.jpg">
+  <source media="(min-width: 450px)" srcset="img/tall_Skinny_Tree450.jpg">
+  <img src="img/tall_Skinny_Tree.jpg" alt="tall_tree" style="width:auto;">
+</picture>
+
+    </div>
+    <header>
+      <h1></h1>
+      <p></p>
+    </header>
+    <div>
+      <img src="images/water_View_NYC.jpg">
+    </div>
+  </body>
+</html>
