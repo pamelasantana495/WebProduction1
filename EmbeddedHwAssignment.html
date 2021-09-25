@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Embedded Objects</title>
+</head>
+<body>
+	<h1>Beatiful Views of Nature In the City</h1>
+	<p>The video displayed below shows a small video of Central Park on the East Side!</p>
+	<video width="400" height="400" controls> 
+		<source src="vidsAndAud/CentralParkEastSide.mp4" type="video/mp4"></video>
+	<p>This an audio of nature/bird noises you would hear in a park!</p>
+	<audio controls>
+		<source src="vidsAndAud/RelaxingNatureSounds.mp3" type="audio/mp3">
+	</audio>
+	<p>These are both responsive images using the methods we explored last week!</p>
+	<div class="responsive">
+     <img srcset="img/PurplePinkFlowers350.jpg 350w,
+                  img/PurplePinkFlowers550.jpg 550w,
+                  img/PurplePinkFlowers780.jpg 780w,"
+           sizes="(max-width: 350px) 100vw,
+                 (max-width: 550px) 85vw,
+                 (max-width: 780px) 60vw,
+                 780px">
+    </div>
+    
+      <br>
+<picture>
+  <source media="(min-width: 750px)" srcset="img/SharpPurplePlant750.jpg">
+  <source media="(min-width: 550px)" srcset="img/SharpPurplePlant550.jpg">
+  <source media="(min-width: 420px)" srcset="img/SharpPurplePlant420.jpg">
+  <img src="img/SharpPurplePlant.jpg" alt="Plant_Sharp" style="width:auto;">
+</picture>
+
+
+</body>
+</html>
