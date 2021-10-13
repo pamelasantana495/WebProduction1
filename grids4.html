@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>grids 4!</title>
+	<link rel="stylesheet" type="text/css" href="grid_style4.css">
+</head>
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 150% 150% 150%;
+    text-align: center;
+    width: 100%;
+    color:white;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size:24px;
+
+
+}
+#item1{
+  background-color: lavender;
+  background-image: url(img/SharpPurplePlant.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    object-fit: cover;
+  grid-column-start: 1;
+    grid-column-end: 3;
+      border: 2px solid white;
+   
+}
+#item2{
+  background-color: green;
+  background: url(vidsAndAud/CentralParkEastSide.mp4);
+  object-fit: cover;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  border: 2px solid white;
+}
+#item3{
+  background-color: green;
+  background-image: url(img/img08.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top center;
+  object-fit: cover;
+  border: 2px solid white;
+
+}
+#item4{
+  background-color: #93EC90;
+  background-image: url(img/water_View_NYC.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top center;
+  object-fit: cover;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  border: 2px solid white;
+}
+#item5{
+  background-color: #EC90EC;
+  background-image: url(img/img10.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  object-fit: cover;
+  border: 2px solid white;
+}
+#item6{
+  background: linear-gradient(60deg, green, lightblue, green, lightblue, green);
+  font-size: 34px;
+  text-align: center;
+  border: 2px solid white;
+}
+</style>
+<body>
+
+<div class="wrapper">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">NYC is BEAUTIFUL!</div>
+</div>
+
+</body>
+</html>
