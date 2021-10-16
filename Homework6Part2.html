@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Homework 6 Part 2!</title>
+</head>
+<style>
+
+  body{
+    background-color: purple;
+  }
+  .wrapper {
+    background-color: purple;
+    display: grid;
+    grid-template-columns:repeat(3, 80%);
+    grid-template-rows: repeat(3, 80%);
+    column-gap: 1em;  
+    grid-row-gap: 1em;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size:24px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+
+}
+#item1{
+  background: url(img/beast.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 2px solid white;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  z-index: 6;
+   
+}
+#item2{
+  background: url(img/dogsSpaghetti.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 2px solid white;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  z-index: 5;
+}
+#item3{
+  background: url(img/rapunzel.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 2px solid white;
+  z-index: 4;
+}
+#item4{
+  background: url(img/disneyJasmine.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 2px solid white;
+   grid-row-start: 2;
+  grid-row-end: 4;
+  z-index: 3;
+}
+#item5{
+  background-image: url(Gifs/mickeyMinnie.gif);
+  background-repeat: no-repeat; 
+  background-size: 100% 100%;
+  border: 2px solid white;
+  z-index: 2;
+}
+#item6{
+  background:linear-gradient(60deg, purple, blue, purple, blue, purple);;
+  background-size: 100% 100%;
+  font-size: 28px;
+  font-style: italic;
+  color: white;
+  border: 2px solid white;
+  z-index: 1;
+}
+div.disney{
+  background: url(img/waltDisneyLogo.jpg);
+  background-repeat: no-repeat;
+  background size: 50% 50%;
+  position: relative;
+  float: right;
+}
+</style>
+<body>
+
+<div class="wrapper">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
+  <div id="item6"> "I'd rather die tomorrow than live a hundred years without knowing you." </div>
+
+<div class="disney"></div>
+</body>
+</html>
