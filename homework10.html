@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homework #10</title>
+
+</head>
+<style>
+body {
+		background-color: skyblue;
+}
+.cloud1 {
+	position: relative;
+	float: left;
+}
+.cloud1right {
+	position: relative;
+	float: right;
+}
+.title {
+	text-align: center;
+	font-family: cursive;
+	font-size: 50px;
+
+}
+.quote {
+	text-align: center;
+	font-family: cursive;
+	font-size: 30px;
+}
+.cloud2 {
+	position: relative;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.change {
+	position: absolute;
+	width: 175px;
+	height: 225px;
+	background: url(img/cremeflower.png);
+	background-repeat: no-repeat;
+	margin: 25px;
+	top: 450px;
+	left: 620px;
+}
+.change:hover {
+	background: url(img/serpent.png);
+	background-repeat: no-repeat;
+	animation-duration: 30s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes demonMove {
+	 0%   {right:0px;}
+
+    10% {bottom:0px;}
+    
+    20% {bottom:0px;}
+
+    30%   {right:100px;}
+
+    40% {bottom:55px;}
+    
+    50% {bottom:0px;}
+
+    60% {right:200px;}
+    
+    70% {top:300px;}
+
+    80%  {top:0px;}
+
+    100% {right: 370px;}
+
+}
+.demon {
+	position: relative;
+	float: right;
+	animation-name: demonMove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+@keyframes angelMove {
+	 0%   {left:0px;}
+
+    15% {top:10px;}
+    
+    30% {left:100px;}
+
+    45% {top:20px;}
+
+    60% {left:200px;}
+
+    75% {top:35px;}
+
+    90% {left:300px;}
+    
+    100% {top:0px;}
+
+
+}
+.angel {
+    position: relative;
+	float: left;
+	bottom: 200px;
+	animation-name: angelMove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;	
+}
+.angel_demon {
+	position: relative;
+	left: 350px;
+	bottom: 200px;
+}
+.angel_demon:active {
+	transform: translateY(300px);
+}
+.green-grass {
+	position: relative;
+	display: grid;
+	background-color: green;
+	width: 100%;
+	height: 250px;
+	top: 50px;
+}
+#war {
+	position: relative;
+	background-image: url(img/fire.jpg);
+}
+.firstimage {
+ position: relative;
+ display: none;
+ bottom: 500px;
+ float:left;
+}
+.secondimage {
+ position: relativee;
+ display: none;
+ bottom: 500px;
+ float:right;
+}
+#type {
+	text-align: center;
+	font-family: cursive;
+	font-size: 50px;
+	color: orange;
+}
+</style>
+<body>
+	<div class="container">
+	<img src="img/cloud1.png" class="cloud1" width="225" height="150">
+	<img src="img/cloud1.png" class="cloud1right" width="225" height="150">
+	<div class="title">Shakespeare</div>
+	<p class="quote"><span style="color: yellow;">"Look like the innocent flower,</span> <span style="color: red;">but be the serpent under it."</span></p>
+	<img src="img/cloud2.png" class="cloud2" width="300" height="150">
+	<div class="change"></div>
+	<img src="img/demon.png" class="demon" width="200" height="225">
+	<img src="img/angel.png" class="angel" width="200" height="225">
+	<img src="img/angelDemon.png" class="angel_demon" width="200" height="200">
+	<div class="green-grass" id="grass"></div>
+</div>
+	<div id="war">
+	<button id="button">The War Has Begun!</button>
+	<button id="button2" onclick="typeWriter()">Message</button>
+
+	<p id="type"></p>
+
+<br>
+<script>
+	var i = 0;
+var text = "Appear as pure, but when it's necessary, be malicious, and don't feel ashamed of it, because at the end of the day, we've all got light and darkness within us.";
+var speed = 40;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("type").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+    <br>
+    <img class="firstimage" id="image1" src="img/demonAngel.png">
+    <img class="secondimage" id="image2" src="img/girlDemonAngel.png">
+	<script>
+	function toggleImage() {
+			var image1 = document.getElementById('image1');
+			var image2 = document.getElementById('image2');
+			image1.classList.toggle('firstimage');
+			image2.classList.toggle('secondimage');
+
+			document.body.style.backgroundColor = "darkred";
+		}
+		var button = document.getElementById('button');
+		button.addEventListener('click', toggleImage);
+	</script>
+</div>
+
+</body>
+</html>
