@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Class Assignment 11</title>
+	<style>
+body {
+	background-color: black;
+}
+#title {
+ text-align: center;
+ font-family: ui-monospace;
+ font-size: 50px;
+ color: blue;
+}
+#description {
+	text-align: center;
+	font-family: ui-monospace;
+	font-size: 40px;
+	color: lightblue;
+}
+#button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	position: relative;
+	background-color: orange;
+	border-left-color: green;
+	border-right-color: green;
+	border-top-color: red;
+	border-bottom-color: red;
+	font-family: ui-monospace;
+	font-size: 50px;
+	text-align: center;
+	width: 200px;
+	height: 150px;
+}
+#output {
+	background color: grey;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	font-family: ui-monospace;
+	font-size: 35px;
+	text-align: center;
+	color: green;
+}
+#output:hover {
+	color: red;
+	font-size: 75px;
+}
+	
+	</style>
+
+</head>
+<body>
+	<h1 id="title">JavaScript!</h1>
+	<p id="description">Click below for a surprise!</p>
+	<button id ="button" onclick="myFunction()">Click me!</button>
+	<div id="output"></div>
+
+	<script>
+		function myFunction() {
+			let size;
+			size = 75;
+			let text = "Marvel movies are better than DC movies!";
+			console.log(text);
+			alert(text);
+
+			document.getElementById('output').innerHTML= text;
+		}
+	</script>
+
+
+</body>
+</html>
