@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homework #11</title>
+</head>
+<style>
+  body {
+    background-color: black;
+  }
+.title {
+  text-align: center;
+  font-family: ui-monospace;
+  font-size: 50px;
+  color: red;
+  font-weight: bold;
+}
+@keyframes girls {
+    0%   {left:0px;}
+
+    15% {left:100px;}
+    
+    30% {left:200px;}
+
+    45% {left:300px;}
+
+    60% {left:400px;}
+
+    75% {left:500px;}
+
+    90% {left:600px;}
+    
+    100% {left:700px;}
+}
+.container {
+  text-align: center;
+  font-family: ui-monospace;
+  font-size: 20px;
+  line-height: 1.6;
+  color: white;
+}
+.photo {
+  position: relative;
+  float: left;
+  animation-name: girls;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in; 
+}
+  </style>
+ </head>
+<body>
+  <h1 class="title">The Sisters</h1>
+  <div class="container">
+  <script>
+    var questions = 9;
+var questionsToGo = ' [' + questions + ' questions to go!]';
+var adjective1 = prompt('Please type an adjective that describes a feeling' + questionsToGo);
+let firstAdj = adjective1.fontcolor("red");
+questions -= 1;
+const first = document.getElementById("adjective1");
+questionsToGo = ' [' + questions + ' questions to go!]';
+var noun1= prompt('Please type a noun of a place of your choosing' + questionsToGo);
+let firstNoun = noun1.fontcolor("red");
+questions -= 1;
+questionsToGo = ' [' + questions + ' questions to go!]';
+var adjective2 = prompt('Please type a adjective that describes a feeling' + questionsToGo);
+let secondAdj = adjective2.fontcolor("red");
+questions -= 1;
+questionsToGo = ' [' + questions + ' questions to go!]';
+var verb1= prompt('Please type a verb that describes an action' + questionsToGo);
+let firstVerb = verb1.fontcolor("red");
+questions -= 1;
+questionsToGo = ' [' + questions + ' questions to go!]';
+var noun2= prompt('Please type a noun of a place that is different from the previous noun you chose' + questionsToGo);
+let secondNoun = noun2.fontcolor("red");
+questions -= 1;
+questionsToGo = ' [' + questions + ' questions to go!]';
+var verb2= prompt('Please type a verb that describes an action' + questionsToGo);
+let secondVerb = verb2.fontcolor("red");
+questions -= 1;
+questionsToGo = ' [' + questions + ' questions to go!]';
+var noun3= prompt('Please type a proper noun of a person, a name of your choosing' + questionsToGo);
+let thirdNoun = noun3.fontcolor("red");
+questions -= 1;
+questionsToGo = ' [' + questions + ' questions to go!]';
+var adjective3 = prompt('Please type a adjective that describes a feeling' + questionsToGo);
+let thirdAdj = adjective3.fontcolor("red");
+questions -= 1;
+questionsToGo = ' [' + questions + ' question to go!]';
+var noun4= prompt('Please type a common noun that describes a thing, more specifically an object' + questionsToGo);
+let fourthNoun = noun4.fontcolor("red");
+alert('Yay! Are you ready to view your story?');
+var sentence = '<h2>' + " The " + firstAdj;
+sentence+= ' little girl ran to the ' + firstNoun;
+sentence+= '. She heard heavy footsteps from the distance and felt ' + secondAdj;
+sentence+= '. She ' + firstVerb;
+sentence+= '. She saw her big sister Ava, and they both talked about the ' + secondNoun;
+sentence+= '. They decided to go there. Ava ' + secondVerb;
+sentence+= ' as she saw ' + thirdNoun;
+sentence+= '. A rush of ' + thirdAdj;
+sentence+= ' took over her body. Ava and her little sister picked up a ' + fourthNoun;
+sentence+= ' that they saw lying down on the floor. They thought that it might be useful as they continue to move along.' + '</h2>';
+document.write(sentence);
+  </script>
+  <img src="img/bareFootprints.jpg" class="footprints">
+  <img src="img/twoGirls.png" class="photo">
+  <audio controls>
+    <source src="vidsAndAud/heavyFootsteps.mp3" type="audio/mp3">
+  </audio>
+</div>
+</html>
