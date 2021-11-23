@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class Assignment #12</title>
+
+
+  <style>
+  
+    body{
+    	background-color: red;
+    }
+    
+  </style>
+	
+    </head>
+<body>
+<section>
+	<h1 id = "title">Spiderman No Way Home Trailer!</h1>
+   <img src="img/spidermanNWH.jpg" id="spidey">
+
+	<p id="text">For those of you who are Marvel fans, I am sure you guys watched the trailer and I hope you guys are as excited to watch the movie as I am!</p>
+
+	<p id="spNWH">SpiderMan No Way Home Trailer
+	<a href="https://youtu.be/7v1BpX4Awxk">Click Here to Be Blown Away!</a>.</p>
+</section>
+  
+  <script>
+    let link = document.querySelector('a');
+    link.textContent = "Click Here To Be Blown Away";
+    link.href = "https://youtu.be/7v1BpX4Awxk";
+    
+    let sect = document.querySelector('section');
+    let para = document.createElement('p');
+    para.textContent = "Do you guys think that Tobey Mcguire and Andrew Garfield are going to make an appearance in the movie?";
+    sect.appendChild(para);
+
+    let styleT = title.style;
+    
+    styleT.textAlign = "center";
+    styleT.fontSize = 50 + "px";
+
+    let styleP = spidey.style;
+    
+    styleP.width =  200 + "px";
+    styleP.height = 300 + "px";
+    styleP.position = "relative";
+    styleP.display = "block";
+    styleP.marginLeft = "auto";
+    styleP.marginRight = "auto";
+
+    let styleTx = text.style;
+
+    styleTx.fontSize = 35 + "px";
+    styleTx.fontStyle = "italic";
+
+    let styleL = spNWH.style;
+
+    styleL.fontSize = 35 + "px";
+
+
+
+
+    let style = para.style;
+    
+    style.color = "white";
+    style.backgroundColor = "blue";
+    style.textAlign = "center";
+    style.fontSize = 35 +"px";
+    
+    
+    
+    
+    
+  </script>
+  
+</body>
