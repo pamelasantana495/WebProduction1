@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>addEventListener() basic example</title>
+ <style>
+  body {
+    background-color: gray;
+  }
+   .wrapper{
+  position: relative;
+}
+.title {
+  text-align: center;
+  color: blue;
+  font-size: 45px;
+}
+.spidey {
+  border: 5px solid black;
+}
+#button{
+  border: 5px solid black;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  float: left;
+  background: red;
+}
+
+#button:hover{
+  background: darkred;
+}
+
+.hide{
+  visibility: hidden;
+}
+
+.reveal{
+  visibility: visible;
+}
+#button2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border: 5px solid blue;
+  border-radius: 50%;
+  width: 200px;
+  text-align: center;
+  color: blue;
+  padding: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  background: red;
+}
+#button2:hover{
+  background: lightblue;
+   background: url(img/spideyWeb.jpg);
+  background-repeat: no-repeat;
+  background-size: 200px 100px;
+  animation-duration: 30s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+#output {
+  background color: grey;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-family: Georgia;
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+#output:hover {
+  color: red;
+  font-size: 55px;
+  font-family: ui-monospace;
+}
+
+#button3{
+  border: 5px solid white;
+  width: 200px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  float: right;
+  background: red;
+}
+@keyframes example3 {
+    from{transform: translateY(30px);}
+    to{transform: translateY(200px);}
+}
+#image3 {
+  float: right;
+   animation-name: example3;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+  
+</style>
+
+</head>
+<body>
+<h1 class="title">SPIDERMAN!</h1>
+<div class="wrapper">
+  <div id="image1" class="hide">
+    <img src="img/spideyTomHolland.jpg" class="spidey">
+  </div>
+  <div id="button">
+    Click me!
+  </div>
+</div>
+
+<div class="wrapper2">
+  <button id ="button2" onclick="myFunction()">Click for a surprise!</button>
+  <div id="output"></div>
+
+  <div class="wrapper3">
+  <button id="button3">Click me please!</button>
+  <br>
+  <img class="thirdimage" id="image3" src="img/spideyCartoon.png">
+
+
+
+ 
+  <script>
+    let button = document.querySelector('#button');
+let img = document.querySelector('#image1');
+
+button.addEventListener('click', ()=>{
+  img.classList.toggle('reveal');
+})
+
+function myFunction() {
+      let size;
+      size = 75;
+      let text = " I know I talk a lot about Marvel, but I can't help it, I'm obsessed! Obviously you can tell that Spiderman is one of my favorites! I feel as though he is underrated as a hero. He has an immense amount of strength, has spidey senses, can stick to things, and is incredibly flexible! People don't give him enough credit. He's obviously not the strongest in comparison to other heroes, but for a kid, I think he does a great job.";
+      console.log(text);
+      document.getElementById('output').innerHTML= text;
+    }
+    function toggleImage() {
+      var image1 = document.getElementById('image3');
+      image3.classList.toggle('thirdimage');
+
+      document.body.style.backgroundColor = "darkred";
+    }
+    var button3 = document.getElementById('button3');
+    button3.addEventListener('click', toggleImage);
+
+  </script>
+
+</body>
+</html>
