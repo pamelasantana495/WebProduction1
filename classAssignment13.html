@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 15</title>
+  <style>
+    body {
+  margin: 40px;
+  font-family: ui-monospace;
+  background-color: black;
+}
+.title {
+  text-align: center;
+  color: white;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px 300px;
+  grid-gap: 20px;
+  background-color: #fff;
+  color: #444;
+  text-align: center;
+  background-color: black;
+}
+#demo {
+  background-color: beige;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+  #demo2 {
+  background-color: purple;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+ #demo3 {
+  background-color: orange;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+ #demo4 {
+  background-color: red;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+ #demo5 {
+  background-color: green;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+ #demo6 {
+  background-color: blue;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+  </style>
+</head>
+<body>
+  <h1 class="title">Class Assignment #13: Working with Console.log()</h1>
+  <div class="wrapper">
+	<div id="demo">a</div>
+	<div id="demo2">b</div>
+	<div id="demo3">c</div>
+  <div id="demo4">d</div>
+  <div id="demo5">e</div>
+  <div id="demo6">21</div>
+  </div>
+	<script>
+    //slide 15 examples
+		let a = "Bubble Tea";
+		let b = "24"; 
+    document.getElementById("demo").innerHTML = a
+    document.getElementById("demo2").innerHTML = b
+		console.log(a, b);
+
+		let c = "Woohoo! I love to code! #javascript";
+		let d = "2.754";
+  	document.getElementById("demo3").innerHTML = c;
+    document.getElementById("demo4").innerHTML = d;
+		console.log(c, d);
+    
+    //slide 21 example
+    let e = "I will be 29.5 years old when we start sending people to Mars."
+    document.getElementById("demo5").innerHTML = e;
+    console.log("I will be " + (20 + 9.5) +" years old when we start sending people to Mars.");
+
+    //slide 29 examples
+    console.log(Math.random() *100);//generating a random number and multiplying it by 100
+    
+    console.log(Math.floor(Math.random() * 100));//converting whatever random number to a whole number
+    
+    console.log(Math.ceil(20.7));//returns the smallest integer greater than or equal to a decimal number.
+    
+    console.log(Number.isInteger(21));//this evaluates to true and prints true to the console.
+    document.getElementById("demo6").innerHTML = 21;
+	</script>
+
+</body>
+</html>
